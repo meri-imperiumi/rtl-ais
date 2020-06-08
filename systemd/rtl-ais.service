@@ -1,6 +1,7 @@
 [Service]
 ExecStart=/home/pi/rtl-ais/rtl_ais -n
 Restart=always
+RestartSec=30
 
 [Unit]
 After=network-online.target
