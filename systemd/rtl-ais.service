@@ -1,0 +1,9 @@
+[Service]
+ExecStart=/home/pi/rtl-ais/rtl_ais -n
+Restart=always
+
+[Unit]
+After=network-online.target
+
+[Install]
+WantedBy=multi-user.target

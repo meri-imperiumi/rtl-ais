@@ -9,7 +9,7 @@ UNAME := $(shell uname)
 ifeq ($(UNAME),Linux)
 #Conditional for Linux
 CFLAGS+= $(shell pkg-config --cflags librtlsdr)
-LDFLAGS+=$(shell pkg-config --libs librtlsdr)
+LDFLAGS+=-lpthread -lm -lrtlsdr -L /usr/lib/arm-linux-gnueabihf/
 
 else
 #
